@@ -1,5 +1,5 @@
 from typing import Any, List, Dict, overload
-from typing_extensions import Protocol
+from enum import Enum, auto
 
 
 class Vector3:
