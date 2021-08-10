@@ -76,6 +76,18 @@ class Vector3:
     def angleTo(self, vector: Vector3) -> float: ...
     def angleToDegrees(self, vector: Vector3) -> float: ...
 
+class BaseObjectType(Enum):
+    Player = 0,
+    Vehicle = auto(),
+    Blip = auto(),
+    WebView = auto(),
+    VoiceChannel = auto(),
+    Colshape = auto(),
+    Checkpoint = auto(),
+    WebSocketClient = auto(),
+    HttpClient = auto(),
+    Audio = auto(),
+    LocalPlayer = auto(),
 
 class BaseObjectType:
     Player: Any
