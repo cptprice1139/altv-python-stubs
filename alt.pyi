@@ -89,10 +89,14 @@ class BaseObjectType(Enum):
     Audio = auto(),
     LocalPlayer = auto(),
 
-class BaseObjectType:
-    Player: Any
-    Vehicle: Any
-    VoiceChannel: Any
+class BaseObject:
+    valid: bool
+    type: BaseObjectType
+    def deleteMeta(key: str) -> None: ...
+    def getMeta(key: str) -> Any: ...
+    def setMeta(key: str, value: Any) -> None: ...
+    def hasMeta(key: str) -> bool: ...
+
     
 class WorldObject(BaseObjectType):
     pos: Vector3
