@@ -76,6 +76,14 @@ class Vector3:
     def angleTo(self, vector: Vector3) -> float: ...
     def angleToDegrees(self, vector: Vector3) -> float: ...
 
+class RGBA:
+    def __init__(self, r: int, g: int, b: int, a: int):
+        self.r = r
+        self.g = g
+        self.b = b
+        self.a = a
+
+
 class BaseObjectType(Enum):
     Player = 0,
     Vehicle = auto(),
@@ -200,8 +208,8 @@ class Vehicle(Entity):
     activeRadioStation: int
     bodyAdditionalHealth: int
     bodyHealth: int
-    # customPrimaryColor: RGBA
-    # customSecondaryColor: RGBA
+    customPrimaryColor: RGBA
+    customSecondaryColor: RGBA
     isPrimaryColorCustom: bool
     isSecondaryColorCustom: bool
     customTires: bool
@@ -227,7 +235,7 @@ class Vehicle(Entity):
     modKitsCount: int
     model: str | int
     neon: int
-    # neonColor: RGBA
+    neonColor: RGBA
     nightlightOn: bool
     numberPlateIndex: int
     numberPlateText: str
@@ -240,7 +248,7 @@ class Vehicle(Entity):
     roofState: bool
     secondaryColor: int
     sirenActive: bool
-    # tireSmokeColor: RGBA
+    tireSmokeColor: RGBA
     wheelColor: int
     wheelType: int
     wheelsCount: int
